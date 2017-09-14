@@ -38,10 +38,9 @@ app.controller("controller", function($scope) {
   };
 
   $scope.calcSaddlePositionAndHeight = function() {
-    var base = ($scope.scale - $scope.jointPosition) * Math.cos($scope.neckAngle * Math.PI / 180.0);
     var height = ($scope.scale - $scope.jointPosition) * Math.sin($scope.neckAngle * Math.PI/ 180.0);
     var strHeight = ($scope.stringHeight - 0.1) * 2.0 + $scope.fretHeight;
-    $scope.saddlePosition = base;
+    $scope.saddlePosition = ($scope.scale - $scope.jointPosition) * Math.cos($scope.neckAngle * Math.PI / 180.0);
     $scope.saddleHeight = height + strHeight + $scope.fingerboardThickness;
   };
 
