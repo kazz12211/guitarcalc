@@ -5,7 +5,7 @@ GuitarCalc is simple calculation program for guitar builder.
 This project is derived from [fret-calculator](https://github.com/kazz12211/fret-calculator) project which was developed using Spring and AngularJS.
 
 GuitarCalcはギター製作者が行ういくつかの計算業務を処理する簡単なプログラムです。
-このプロジェクトはSpringとAngularJSを使って化初した[fret-calculator](https://github.com/kazz12211/fret-calculator)として公開しプロジェクトの派生です。
+このプロジェクトはSpringとAngularJSを使って開発した[fret-calculator](https://github.com/kazz12211/fret-calculator)として公開しプロジェクトの派生です。
 
 ## Development requirement
 
