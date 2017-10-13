@@ -31,3 +31,13 @@ The following JavaScript libraries are included in the project.
 
 	$ cd GUITARCALC_PROJECT_PATH
 	$ electron-packager . guitarcalc --platform=linux --arch=x64 --electronVersion=1.7.6 [--overwrite]
+
+### Note
+
+Electronを使用する場合は、index.htmlのjQueryの読み込み部分を次のようにする。
+
+	<script src="scripts/jquery-2.1.1.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+
+Electronを使用しない場合（Webブラウザを使う場合）は次のようにする。
+
+	<script src="scripts/jquery-2.1.1.min.js"></script>
