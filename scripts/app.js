@@ -1,7 +1,6 @@
 var app = angular.module("app",[]);
 
 app.controller("controller", function($scope) {
-  $scope.scale = 635;
   $scope.numFrets = 22;
   $scope.jointPosition = 0;
   $scope.neckAngle = 0;
@@ -19,6 +18,25 @@ app.controller("controller", function($scope) {
   $scope.fingerboardLength = 0.0;
   $scope.tab = 0;
   $scope.frets = [];
+  $scope.models = [
+    {name:'', scale:635},
+    {name:'Gibson LesPaul (628mm)', scale:628},
+    {name:'Gibson SG (628mm)', scale:628},
+    {name:'Gibson ES-335 (628mm)', scale:628},
+    {name:'PRS (635mm)', scale:635},
+    {name:'Fender Stratocaster (648mm)', scale:648},
+    {name:'Fender Telecaster (648mm)', scale:648},
+    {name:'Fender Jazz Master (648mm)', scale:648},
+    {name:'Fender Mustang (609mm)', scale:609},
+    {name:'Martin OOO (632mm)', scale:632},
+    {name:'Fender OM (645mm)', scale:645}
+  ];
+  $scope.selectedModel = $scope.models[0];
+  $scope.scale = $scope.selectedModel.scale;
+
+  $scope.applyModel = function() {
+      $scope.scale = $scope.selectedModel.scale;
+  };
 
   $scope.calcFretPositions = function() {
     var f = $scope.scale;
