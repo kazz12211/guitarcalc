@@ -29,7 +29,7 @@ app.controller("controller", function($scope) {
     {name:'Fender Jazz Master (648mm)', scale:648},
     {name:'Fender Mustang (609mm)', scale:609},
     {name:'Martin OOO (632mm)', scale:632},
-    {name:'Fender OM (645mm)', scale:645}
+    {name:'Martin OM (645mm)', scale:645}
   ];
   $scope.selectedModel = $scope.models[0];
   $scope.scale = $scope.selectedModel.scale;
